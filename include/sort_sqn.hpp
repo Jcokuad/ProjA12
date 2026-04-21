@@ -4,7 +4,7 @@
 #include <cmath>  // for std::sqrt and std::ceil
 #include <functional>  // for std::greater
 #include <algorithm> // for std::sort
-#include "heap_implementation.hpp"
+#include "heap_priority_queue.hpp"
 
 namespace dsac::priority {
 

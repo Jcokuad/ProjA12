@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include "heap_implementation.hpp"
+#include "heap_priority_queue.hpp"
 
 namespace dsac::priority {
 

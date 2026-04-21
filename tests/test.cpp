@@ -4,6 +4,7 @@
 #include "min_merge_cost.hpp"
 #include "sort_sqn.hpp"
 
+
 using namespace dsac::priority;
 
 TEST_CASE("min_merge_cost handles 1 and less inputs correctly") {
