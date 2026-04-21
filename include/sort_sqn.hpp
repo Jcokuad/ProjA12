@@ -37,7 +37,6 @@ std::vector<int> top_sqrtN_sorted(const std::vector<int>& v) {
         hq.remove_min();
     }
     std::sort(output.begin(), output.end(), std::greater<int>()); // sorting
-    
     return output;
 }
 

@@ -112,7 +112,7 @@ class HeapPriorityQueue {
             data.push_back(e);
 
             // upheap newly added entry
-            upheap(data.size() - 1);
+            upheap(static_cast<int>(data.size()) - 1);
         }
 
         void remove_min() {
