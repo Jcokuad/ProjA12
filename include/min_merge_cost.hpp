@@ -1,7 +1,8 @@
 #pragma once
 
 #include <vector>
-#include "heap_priority_queue.hpp"
+#include <queue>
+#include <functional> // for std::greater
 
 namespace dsac::priority {
 
@@ -12,24 +13,24 @@ int min_merge_cost(const std::vector<int>& files) {
     }
 
     // Initialize a min-heap
-    HeapPriorityQueue<int> hq;
+    std::priority_queue<int, std::vector<int>, std::greater<int>> hq;
 
     // add all files to the heap
     for (int file_sz : files) {
-        hq.insert(file_sz);
+        hq.push(file_sz);
     }
 
     int total = 0;
     while (hq.size() > 1) {
-        int first{hq.min()}; // assign the first smallest to first, then remove from heap
-        hq.remove_min();
+        int first{hq.top()}; // assign the first smallest to first, then remove from heap
+        hq.pop();
 
-        int second{hq.min()}; // assign the next smallest to second, then remove from heap
-        hq.remove_min();
+        int second{hq.top()}; // assign the next smallest to second, then remove from heap
+        hq.pop();
 
         int merge = first + second; // cost of the merge is a + b
         total += merge;
-        hq.insert(merge); // put the merged file back in the heap
+        hq.push(merge); // put the merged file back in the heap
     }
 
     return total;
