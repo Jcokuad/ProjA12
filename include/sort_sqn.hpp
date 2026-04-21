@@ -4,8 +4,7 @@
 #include <cmath>  // for std::sqrt and std::ceil
 #include <functional>  // for std::greater
 #include <algorithm> // for std::sort
-
-namespace dsac::priority {
+#include <queue>
 
 std::vector<int> top_sqrtN_sorted(const std::vector<int>& v) {
     const int n = static_cast<int>(v.size());
@@ -37,6 +36,4 @@ std::vector<int> top_sqrtN_sorted(const std::vector<int>& v) {
     }
     std::sort(output.begin(), output.end(), std::greater<int>()); // sorting
     return output;
-}
-
 }

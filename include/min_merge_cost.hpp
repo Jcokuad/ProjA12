@@ -4,8 +4,6 @@
 #include <queue>
 #include <functional> // for std::greater
 
-namespace dsac::priority {
-
 int min_merge_cost(const std::vector<int>& files) {
     // Check if there are 1 or less files
     if (files.size() <= 1) {
@@ -34,7 +32,5 @@ int min_merge_cost(const std::vector<int>& files) {
     }
 
     return total;
-}
-
 }
 
